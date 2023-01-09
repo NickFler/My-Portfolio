@@ -1,0 +1,63 @@
+
+.about-me__main {
+    display: flex;
+    justify-content: space-between;
+    padding: 48px 96px;
+    margin-bottom: 81px;
+    border-bottom: $border;
+    margin-top: 256px;
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+    }
+    @include mobile {
+        padding: 0;
+    }
+}
+.about-me__info {
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    margin-bottom: 81px;
+    max-width: 390px;
+    position: relative;
+    
+}
+.music {
+    position: absolute;
+    top: -74px;
+    left: 0;
+  
+}
+.light {
+    position: absolute;
+    top: 0;
+    left: 365px;
+    @include mobile {
+        display: none;
+    }
+}
+.info__title {
+    @include text ($font-primary, 700, 64px, 96px, $color-text);
+}
+
+.info__desc {
+    @include text ($font-primary, 400, 18px, 27px, $grad-text);
+}
+.about-me__img {
+    z-index: 1;
+    @include tablet {
+        margin-bottom: 81px;
+    }
+    @include tablet-small{
+        display: none;
+    }
+}
+.about-me__img__main {
+    position: relative;
+}
+.about-me__img__main__cover {
+    position: absolute;
+    top: 193px;
+    right: 123px;
+}

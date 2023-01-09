@@ -1,0 +1,23 @@
+.footer {
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+.footer__nav {
+    display: flex;
+    gap: 75px;
+    justify-content: center;
+    align-items: center;
+    @include mobile {
+        flex-direction: column;
+    }
+}
+.footer__nav__li {
+}
+.footer-social {
+    @include text ($font-primary, 400, 18px, 27px, $color-text);
+    transition: .3s;
+    &:hover {
+        color: $color-prismarine;
+        
+    }
+}

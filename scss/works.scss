@@ -1,0 +1,222 @@
+.works {
+    
+    background: url(../img/works/doodle\ items.png);
+   
+    padding-top: 179px;
+    padding-left: 120px;
+    padding-bottom: 151px;
+    
+    @include mobile {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+.works__info {
+    margin-bottom: 40px;
+}
+.works__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    
+    @include mobile {
+        display: flex;
+        align-items: center;
+    justify-content: center;
+    }
+    &._active {
+        display: block;
+    }
+    .portfolio-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 48px;
+    }
+    .web-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 48px;
+
+    }
+    .other-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 48px;
+
+    }
+}
+
+
+
+.main-cover {
+    
+   }
+   
+.portfolio {
+    &._active{
+        display: block;
+    }
+   &._hide{
+    display: none;
+   }
+}
+.web {
+    &._active {
+        display: block;
+    }
+   &._hide{
+    display: none;
+   }
+
+
+}
+.other {
+    &._active{
+display: block;
+    }
+       &._hide{
+        display: none;
+       }
+}
+.group-cover {
+    border-radius: 14px;
+}
+.group {
+    padding: 61px 52px ;
+    background: rgba(57, 62, 70, 0.5);
+    backdrop-filter: blur(2px);
+border-radius: 16px;
+&:hover {
+    backdrop-filter: blur(7.5px);
+    .main-cover{
+        filter: blur(14px);
+        
+        
+    }
+    
+    .works__list__img__hover { 
+       
+        
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        right: 25px;
+        bottom: 25px;
+    }
+}
+}
+.circle {
+  width: 192px;
+  height: 200px;
+  background: $color-prismarine;
+  animation: color 2s ;
+  border-radius: 50%;
+  animation-iteration-count: infinite;
+}
+@keyframes color {
+    0% {
+        background: $color-prismarine;
+    }
+    50%{
+        background: $color-animation;
+    }
+    100% {
+        background: $color-prismarine;
+    }
+}
+.works__list__img {
+   position: relative;
+   transition: .3s ease-in-out;
+ 
+   
+ .works__list__img__main{
+   
+    padding: 40px 88px ;
+    background: rgba(57, 62, 70, 0.5);
+    backdrop-filter: blur(2px) ;
+   
+border-radius: 16px;
+ }   
+    &:hover {
+        backdrop-filter: blur(7.5px);
+        .main-cover{
+            filter: blur(14px) brightness(80%);
+            
+        }
+        
+        .works__list__img__hover { 
+           
+            
+            display: block;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            right: 25px;
+            bottom: 25px;
+        }
+        .circle {
+            filter: blur(14px) brightness(80%);
+        }
+        .alivio-circle__text {
+            filter: blur(14px) brightness(80%);
+        }
+    }
+}
+.works__list__img__hover {
+    
+    
+   display: none;
+   animation: opacity .5s ;
+ 
+   
+}
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.hover__title {
+    margin-bottom: 7px;
+    @include text ($font-primary, 700, 16px, 24px, $grad-text);
+    transition: .3s ease-in-out;
+}
+.hover__desc {
+    margin-bottom: 26px;
+    word-break: break-all;
+    @include text ($font-primary, 400, 14px, 21px, $grad-text);
+    transition: .3s ease-in-out;
+}
+.hover__a {
+    @include text ($font-primary, 700, 18px, 27px, $grad-text);
+    background: $color-prismarine;
+    text-decoration: none;
+    padding: 10px 32px;
+    border-radius: 23px;
+    border: 1px solid $color-prismarine;
+    transition: .3s ease-in-out;
+    &:hover {
+        background: $grad-works;
+        border: 1px solid $color-prismarine;
+        color: $color-prismarine;
+        
+    }
+
+}
+.alivio-circle {
+    
+  
+}
+.alivio-circle__text {
+    font-family: $font-logo;
+    font-size: 93px;
+    color: $color-text;
+    padding: 31px 71px;
+    background: #245852;
+    animation: colort 2s ;
+  border-radius: 50%;
+  animation-iteration-count: infinite;
+}

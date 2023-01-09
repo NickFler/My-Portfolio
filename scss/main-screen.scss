@@ -1,0 +1,110 @@
+.main-screen {
+padding: 48px 96px;
+display: flex;
+justify-content: space-between;
+margin-bottom: 256px;
+
+@include desktop-small {
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+}
+
+.main-screen-main {
+   
+    display: flex;
+    align-items: center;
+    @include desktop-small {
+        justify-content: center;
+        }
+    
+    
+}
+.main-screen__img-main {
+    @include mobile {
+        display: none;
+    }
+}
+.main-screen-main__img {
+    @include mobile {
+        display: none;
+    }
+}
+.main-screen-main__info {
+    display: flex;
+    flex-direction: column;
+    
+}
+.main-screen__title {
+    @include text ($font-primary, 700, 96px, 96px, $color-white);
+    max-width: 586px;
+    margin-bottom: 25px;
+    @include mobile {
+        @include text ($font-primary, 700, 65px, 65px, $color-white);
+    }
+
+}
+.prismarine {
+    color: $color-prismarine;
+}
+.main-screen__buttons {
+    display: flex;
+    gap: 24px;
+    @include mobile {
+        gap: 13px ;
+    }
+}
+.main-screen__buttons__link {
+    @include text ($font-primary, 700, 18px, 27px, $color-text);
+    text-decoration: none;
+    background: $color-prismarine;
+    padding: 10px 32px;
+    border-radius: 24px;
+    border: 1px solid $color-prismarine;
+    transition: .3s;
+   &:hover {
+   background: $color-background;
+   color: $color-prismarine;
+   }
+
+
+
+}
+.main-screen__buttons__download {
+    display: flex;
+    align-items: center;
+    @include text ($font-primary, 700, 18px, 27px, $color-text);
+    text-decoration: none;
+    background: $grad-primary;
+    padding: 10px 32px;
+    border-radius: 24px;
+    border: 1px solid $grad-primary;
+    transition: .3s;
+    &:hover {
+        background: $color-background;
+        border: 1px solid $color-white;
+        color: $color-white;
+    }
+    
+}
+.material-symbols-outlined {
+}
+.main-screen-main__img {
+    
+    
+}
+.main-screen__img-main {
+    position: relative;
+}
+.cover {
+    position: absolute;
+    right: 127px;
+    top: 128px;
+    @include desktop-small {
+        position: absolute;
+        right: 110px;
+        top: 128px;
+    }
+}

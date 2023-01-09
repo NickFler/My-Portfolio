@@ -1,0 +1,28 @@
+html, body {
+    font-family: $font-primary;
+    background: $color-background;
+    
+    
+}
+body {
+
+ 
+  
+}
+
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+
+    &._overFlow {
+      overflow: hidden;  
+    }
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+
